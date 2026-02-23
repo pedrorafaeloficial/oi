@@ -2,14 +2,21 @@ import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
 import ProductGrid from '@/components/ProductGrid';
 import Footer from '@/components/Footer';
+import { SplineSceneBasic } from '@/components/SplineSceneBasic';
+import { FloatingRobot } from '@/components/FloatingRobot';
 
 export default function Home() {
   return (
-    <main className="min-h-screen flex flex-col">
+    <main className="min-h-screen flex flex-col relative">
       <Navbar />
       <Hero />
       <ProductGrid />
       
+      {/* 3D Interactive Section */}
+      <section className="py-12 px-4 max-w-7xl mx-auto w-full">
+        <SplineSceneBasic />
+      </section>
+
       {/* Editorial Section */}
       <section className="py-24 bg-stone-100">
         <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
@@ -37,6 +44,9 @@ export default function Home() {
       </section>
 
       <Footer />
+      
+      {/* Floating Robot Widget */}
+      <FloatingRobot />
     </main>
   );
 }
